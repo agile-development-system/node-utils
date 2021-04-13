@@ -3,7 +3,6 @@
         "target": "ES6",
         "module": "commonjs",
         "allowJs": true,
-        "checkJs": true,
         "declaration": true,
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
@@ -13,5 +12,8 @@
         "declarationDir": "lib/type",
         "outDir": "lib"
     },
-    "include": ["./src"],
+    "include": [
+        "src",
+        "node_modules"
+    ],
 }
