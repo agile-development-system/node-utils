@@ -1,0 +1,44 @@
+{
+  "name": "@ads/node-utils",
+  "version": "1.0.0",
+  "description": "敏捷开发系统内部node工具函数库",
+  "main": "lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:agile-development-system/node-utils.git"
+  },
+  "keywords": [
+    "ads",
+    "agile-development-system",
+    "node",
+    "utils",
+    "node-utils",
+    "log",
+    "fs"
+  ],
+  "author": "junyang",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.13.15",
+    "@babel/plugin-transform-modules-commonjs": "^7.13.8",
+    "@babel/preset-env": "^7.13.15",
+    "eslint": "^7.24.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "merge2": "^1.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.4"
+  }
+}
