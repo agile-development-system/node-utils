@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "敏捷开发系统内部node工具函数库",
   "main": "lib",
+  "types": "lib/types",
   "scripts": {
+    "build": "node gulpfile.js",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
