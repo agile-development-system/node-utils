@@ -1,10 +1,9 @@
-<a name="module_nodeUtils"></a>
+# @ads/node-utils
 
-## nodeUtils
-**Summary**: 敏捷开发系统内部node工具函数库
+敏捷开发系统内部node工具函数库
 ## 快速开始
 ### 安装
-```base
+```bash
 npm i @ads/node-utils
 ```
 ### 引入
@@ -16,58 +15,15 @@ const { ConvName, FastPath, FastFs, Notice } = utils;
 ```js
 module.exports = { ConvName, FastPath, FastFs, Notice }
 ```
+<a name="module_nodeUtils"></a>
 
-* [nodeUtils](#module_nodeUtils)
-    * [.ConvName](#module_nodeUtils.ConvName)
-        * [new ConvName(name)](#new_module_nodeUtils.ConvName_new)
-        * _instance_
-            * [.lineName](#module_nodeUtils.ConvName+lineName) : <code>string</code>
-            * [.humpName](#module_nodeUtils.ConvName+humpName) : <code>string</code>
-            * [.lowerHumpName](#module_nodeUtils.ConvName+lowerHumpName) : <code>string</code>
-        * _static_
-            * [.toUpperHump(name)](#module_nodeUtils.ConvName.toUpperHump) ⇒ <code>string</code>
-            * [.toLowerHump(name)](#module_nodeUtils.ConvName.toLowerHump) ⇒ <code>string</code>
-            * [.toLine(name)](#module_nodeUtils.ConvName.toLine) ⇒ <code>string</code>
-            * [.initName(name)](#module_nodeUtils.ConvName.initName) ⇒ <code>ConvName</code>
-    * [.FastFs](#module_nodeUtils.FastFs)
-        * [.writeFile(filename, data)](#module_nodeUtils.FastFs+writeFile) ⇒ <code>Promise.&lt;void&gt;</code>
-        * [.writeFileSync(filename, data)](#module_nodeUtils.FastFs+writeFileSync) ⇒ <code>void</code>
-        * [.getPathStat(path)](#module_nodeUtils.FastFs+getPathStat) ⇒ <code>Promise.&lt;boolean&gt;</code>
-        * [.getPathStatSync(path)](#module_nodeUtils.FastFs+getPathStatSync) ⇒ <code>boolean</code>
-        * [.writeJsonFormat(filePath, data)](#module_nodeUtils.FastFs+writeJsonFormat)
-    * [.FastPath](#module_nodeUtils.FastPath)
-        * [.getCwdPath(...paths)](#module_nodeUtils.FastPath.getCwdPath) ⇒ <code>string</code>
-        * [.getHomePath(...paths)](#module_nodeUtils.FastPath.getHomePath) ⇒ <code>string</code>
-        * [.getAdsHomePath(...paths)](#module_nodeUtils.FastPath.getAdsHomePath) ⇒ <code>string</code>
-        * [.convPath(basePath, paths)](#module_nodeUtils.FastPath.convPath) ⇒ <code>string</code>
-    * [.Notice](#module_nodeUtils.Notice)
-        * [.success(msg)](#module_nodeUtils.Notice.success) ⇒ <code>void</code>
-        * [.error(msg)](#module_nodeUtils.Notice.error) ⇒ <code>void</code>
-        * [.warn(msg)](#module_nodeUtils.Notice.warn) ⇒ <code>void</code>
-        * [.info(msg)](#module_nodeUtils.Notice.info) ⇒ <code>void</code>
-        * [.getStr(type, msg)](#module_nodeUtils.Notice.getStr) ⇒ <code>chalk</code>
-        * [.getBoldStr(type, msg)](#module_nodeUtils.Notice.getBoldStr) ⇒ <code>chalk</code>
-    * [.getDeepPreset(config)](#module_nodeUtils.getDeepPreset) ⇒ <code>Promise.&lt;Array.&lt;Config&gt;&gt;</code>
-
+## nodeUtils
 <a name="module_nodeUtils.ConvName"></a>
 
 ### nodeUtils.ConvName
 名称处理工具类，命名格式转换
 
 **Kind**: static class of [<code>nodeUtils</code>](#module_nodeUtils)
-
-* [.ConvName](#module_nodeUtils.ConvName)
-    * [new ConvName(name)](#new_module_nodeUtils.ConvName_new)
-    * _instance_
-        * [.lineName](#module_nodeUtils.ConvName+lineName) : <code>string</code>
-        * [.humpName](#module_nodeUtils.ConvName+humpName) : <code>string</code>
-        * [.lowerHumpName](#module_nodeUtils.ConvName+lowerHumpName) : <code>string</code>
-    * _static_
-        * [.toUpperHump(name)](#module_nodeUtils.ConvName.toUpperHump) ⇒ <code>string</code>
-        * [.toLowerHump(name)](#module_nodeUtils.ConvName.toLowerHump) ⇒ <code>string</code>
-        * [.toLine(name)](#module_nodeUtils.ConvName.toLine) ⇒ <code>string</code>
-        * [.initName(name)](#module_nodeUtils.ConvName.initName) ⇒ <code>ConvName</code>
-
 <a name="new_module_nodeUtils.ConvName_new"></a>
 
 #### new ConvName(name)
@@ -146,14 +102,6 @@ module.exports = { ConvName, FastPath, FastFs, Notice }
 文件系统操作类，集合了几个使用频率较高的文件操作函数
 
 **Kind**: static class of [<code>nodeUtils</code>](#module_nodeUtils)
-
-* [.FastFs](#module_nodeUtils.FastFs)
-    * [.writeFile(filename, data)](#module_nodeUtils.FastFs+writeFile) ⇒ <code>Promise.&lt;void&gt;</code>
-    * [.writeFileSync(filename, data)](#module_nodeUtils.FastFs+writeFileSync) ⇒ <code>void</code>
-    * [.getPathStat(path)](#module_nodeUtils.FastFs+getPathStat) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.getPathStatSync(path)](#module_nodeUtils.FastFs+getPathStatSync) ⇒ <code>boolean</code>
-    * [.writeJsonFormat(filePath, data)](#module_nodeUtils.FastFs+writeJsonFormat)
-
 <a name="module_nodeUtils.FastFs+writeFile"></a>
 
 #### fastFs.writeFile(filename, data) ⇒ <code>Promise.&lt;void&gt;</code>
@@ -219,13 +167,6 @@ module.exports = { ConvName, FastPath, FastFs, Notice }
 如果是绝对路径，就按照绝对路径拼接
 
 **Kind**: static class of [<code>nodeUtils</code>](#module_nodeUtils)
-
-* [.FastPath](#module_nodeUtils.FastPath)
-    * [.getCwdPath(...paths)](#module_nodeUtils.FastPath.getCwdPath) ⇒ <code>string</code>
-    * [.getHomePath(...paths)](#module_nodeUtils.FastPath.getHomePath) ⇒ <code>string</code>
-    * [.getAdsHomePath(...paths)](#module_nodeUtils.FastPath.getAdsHomePath) ⇒ <code>string</code>
-    * [.convPath(basePath, paths)](#module_nodeUtils.FastPath.convPath) ⇒ <code>string</code>
-
 <a name="module_nodeUtils.FastPath.getCwdPath"></a>
 
 #### FastPath.getCwdPath(...paths) ⇒ <code>string</code>
@@ -278,15 +219,6 @@ module.exports = { ConvName, FastPath, FastFs, Notice }
 基于chalk封装的控制台输出静态函数类
 
 **Kind**: static class of [<code>nodeUtils</code>](#module_nodeUtils)
-
-* [.Notice](#module_nodeUtils.Notice)
-    * [.success(msg)](#module_nodeUtils.Notice.success) ⇒ <code>void</code>
-    * [.error(msg)](#module_nodeUtils.Notice.error) ⇒ <code>void</code>
-    * [.warn(msg)](#module_nodeUtils.Notice.warn) ⇒ <code>void</code>
-    * [.info(msg)](#module_nodeUtils.Notice.info) ⇒ <code>void</code>
-    * [.getStr(type, msg)](#module_nodeUtils.Notice.getStr) ⇒ <code>chalk</code>
-    * [.getBoldStr(type, msg)](#module_nodeUtils.Notice.getBoldStr) ⇒ <code>chalk</code>
-
 <a name="module_nodeUtils.Notice.success"></a>
 
 #### Notice.success(msg) ⇒ <code>void</code>
