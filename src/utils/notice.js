@@ -3,7 +3,10 @@ const error = chalk.red;
 const success = chalk.green;
 const warn = chalk.yellow;
 const info = chalk.cyan;
-/** 基于chalk封装的控制台输出静态函数类 */
+/**
+ * 基于chalk封装的控制台输出静态函数类
+ * @alias module:nodeUtils.Notice
+ */
 class Notice {
     /**
      * 控制台输出成功信息

@@ -1,4 +1,7 @@
-/** 名称处理工具类，命名格式转换 */
+/**
+ * 名称处理工具类，命名格式转换
+ * @alias module:nodeUtils.ConvName
+ */
 class ConvName {
     /**
      * 横杠名称

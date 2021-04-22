@@ -2,6 +2,7 @@ const _path = require('path');
 /**
  * 路径工具类，快速获取各类node常用路径，每个方法要求路径都不是绝对路径
  * 如果是绝对路径，就按照绝对路径拼接
+ * @alias module:nodeUtils.FastPath
  */
 class FastPath {
     /**

@@ -1,5 +1,8 @@
 const fs = require('fs-extra');
-/** 文件系统操作类，集合了几个使用频率较高的文件操作函数 */
+/**
+ * 文件系统操作类，集合了几个使用频率较高的文件操作函数
+ * @alias module:nodeUtils.FastFs
+ */
 class FastFs {
     /**
      * 异步写入数据，不存在的路径自动创建
