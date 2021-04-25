@@ -102,58 +102,58 @@ module.exports = { ConvName, FastPath, FastFs, Notice }
 文件系统操作类，集合了几个使用频率较高的文件操作函数
 
 **Kind**: static class of [<code>nodeUtils</code>](#module_nodeUtils)
-<a name="module_nodeUtils.FastFs+writeFile"></a>
+<a name="module_nodeUtils.FastFs.writeFile"></a>
 
-#### fastFs.writeFile(filename, data) ⇒ <code>Promise.&lt;void&gt;</code>
+#### FastFs.writeFile(filename, data) ⇒ <code>Promise.&lt;void&gt;</code>
 异步写入数据，不存在的路径自动创建
 
-**Kind**: instance method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
+**Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
 
 | Param | Type | Description |
 | --- | --- | --- |
 | filename | <code>string</code> | 文件名 |
 | data | <code>object</code> | 写入的数据（对象） |
 
-<a name="module_nodeUtils.FastFs+writeFileSync"></a>
+<a name="module_nodeUtils.FastFs.writeFileSync"></a>
 
-#### fastFs.writeFileSync(filename, data) ⇒ <code>void</code>
+#### FastFs.writeFileSync(filename, data) ⇒ <code>void</code>
 写入数据，不存在的路径自动创建
 
-**Kind**: instance method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
+**Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
 
 | Param | Type | Description |
 | --- | --- | --- |
 | filename | <code>string</code> | 文件名 |
 | data | <code>object</code> | 写入的数据（对象） |
 
-<a name="module_nodeUtils.FastFs+getPathStat"></a>
+<a name="module_nodeUtils.FastFs.getPathStat"></a>
 
-#### fastFs.getPathStat(path) ⇒ <code>Promise.&lt;boolean&gt;</code>
+#### FastFs.getPathStat(path) ⇒ <code>Promise.&lt;boolean&gt;</code>
 获取路径是否存在
 
-**Kind**: instance method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
+**Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
 
 | Param | Type | Description |
 | --- | --- | --- |
 | path | <code>string</code> | 路径 |
 
-<a name="module_nodeUtils.FastFs+getPathStatSync"></a>
+<a name="module_nodeUtils.FastFs.getPathStatSync"></a>
 
-#### fastFs.getPathStatSync(path) ⇒ <code>boolean</code>
+#### FastFs.getPathStatSync(path) ⇒ <code>boolean</code>
 同步获取路径是否存在
 
-**Kind**: instance method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
+**Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
 
 | Param | Type | Description |
 | --- | --- | --- |
 | path | <code>string</code> | 路径 |
 
-<a name="module_nodeUtils.FastFs+writeJsonFormat"></a>
+<a name="module_nodeUtils.FastFs.writeJsonFormat"></a>
 
-#### fastFs.writeJsonFormat(filePath, data)
+#### FastFs.writeJsonFormat(filePath, data)
 写入符合.json格式的json文件
 
-**Kind**: instance method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
+**Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -272,7 +272,7 @@ module.exports = { ConvName, FastPath, FastFs, Notice }
 
 | Param | Type | Description |
 | --- | --- | --- |
-| type | [<code>chalkType</code>](#chalkType) | chalk类型 |
+| type | [<code>chalkType</code>](#module_nodeUtils.Notice..chalkType) | chalk类型 |
 | msg | <code>string</code> | 文本 |
 
 <a name="module_nodeUtils.Notice.getBoldStr"></a>
@@ -284,35 +284,52 @@ module.exports = { ConvName, FastPath, FastFs, Notice }
 
 | Param | Type | Description |
 | --- | --- | --- |
-| type | [<code>chalkType</code>](#chalkType) | chalk类型 |
+| type | [<code>chalkType</code>](#module_nodeUtils.Notice..chalkType) | chalk类型 |
 | msg | <code>string</code> | 文本 |
 
-<a name="module_nodeUtils.getDeepPreset"></a>
+<a name="module_nodeUtils.Notice..chalkType"></a>
 
-### nodeUtils.getDeepPreset(config) ⇒ <code>Promise.&lt;Array.&lt;Config&gt;&gt;</code>
-递归获取配置对象presets数组，返回一维数组
-
-**Kind**: static method of [<code>nodeUtils</code>](#module_nodeUtils)
-
-| Param | Type |
-| --- | --- |
-| config | [<code>Config</code>](#Config) |
-
-<a name="chalkType"></a>
-
-## chalkType : <code>&#x27;success&#x27;</code> \| <code>&#x27;error&#x27;</code> \| <code>&#x27;warn&#x27;</code> \| <code>&#x27;info&#x27;</code> \| <code>string</code>
+#### Notice~chalkType : <code>&#x27;success&#x27;</code> \| <code>&#x27;error&#x27;</code> \| <code>&#x27;warn&#x27;</code> \| <code>&#x27;info&#x27;</code> \| <code>string</code>
 chalk类型以及别名
 
-**Kind**: global typedef
-<a name="Config"></a>
+**Kind**: inner typedef of [<code>Notice</code>](#module_nodeUtils.Notice)
+<a name="module_nodeUtils.PresetUtils"></a>
 
-## Config
+### nodeUtils.PresetUtils
+支持presets预设的配置生成工具
+
+**Kind**: static class of [<code>nodeUtils</code>](#module_nodeUtils)
+<a name="module_nodeUtils.PresetUtils.getDeepPreset"></a>
+
+#### PresetUtils.getDeepPreset(config) ⇒ <code>Promise.&lt;Array.&lt;module:nodeUtils.PresetUtils~Config&gt;&gt;</code>
+递归获取配置对象presets数组，返回一维数组
+
+**Kind**: static method of [<code>PresetUtils</code>](#module_nodeUtils.PresetUtils)
+
+| Param | Type | Description |
+| --- | --- | --- |
+| config | [<code>Config</code>](#module_nodeUtils.PresetUtils..Config) | 配置对象 |
+
+<a name="module_nodeUtils.PresetUtils.getDeepPresetMerge"></a>
+
+#### PresetUtils.getDeepPresetMerge(config) ⇒ [<code>Config</code>](#module_nodeUtils.PresetUtils..Config)
+递归获取配置对象presets数组，并使用merge合并
+
+**Kind**: static method of [<code>PresetUtils</code>](#module_nodeUtils.PresetUtils)
+
+| Param | Type | Description |
+| --- | --- | --- |
+| config | [<code>Config</code>](#module_nodeUtils.PresetUtils..Config) | 配置对象 |
+
+<a name="module_nodeUtils.PresetUtils..Config"></a>
+
+#### PresetUtils~Config : <code>object</code>
 支持preset的配置对象
 
-**Kind**: global typedef
+**Kind**: inner typedef of [<code>PresetUtils</code>](#module_nodeUtils.PresetUtils)
 **Properties**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| presets | [<code>Array.&lt;Config&gt;</code>](#Config) | 预设配置数组 |
+| presets | <code>Array.&lt;Config&gt;</code> | 预设配置数组 |
 

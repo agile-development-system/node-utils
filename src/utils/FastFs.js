@@ -10,7 +10,7 @@ class FastFs {
      * @param  {object} data 写入的数据（对象）
      * @return {Promise<void>}
      */
-    writeFile(filename, data) {
+    static writeFile(filename, data) {
         return fs.ensureFile(filename).then(() => fs.writeFile(filename, data));
     }
 
@@ -20,7 +20,7 @@ class FastFs {
      * @param  {object} data 写入的数据（对象）
      * @return {void}
      */
-    writeFileSync(filename, ...argv) {
+    static writeFileSync(filename, ...argv) {
         fs.ensureFileSync(filename);
         return fs.writeFileSync(filename, ...argv);
     }
@@ -30,7 +30,7 @@ class FastFs {
      * @param {string} path 路径
      * @returns {Promise<boolean>}
      */
-    getPathStat(path) {
+    static getPathStat(path) {
         return fs.stat(path).catch(() => false);
     }
 
@@ -39,7 +39,7 @@ class FastFs {
      * @param {string} path 路径
      * @returns {boolean}
      */
-    getPathStatSync(path) {
+    static getPathStatSync(path) {
         try {
             return !!fs.statSync(path);
         } catch (err) {
@@ -52,7 +52,7 @@ class FastFs {
      * @param {string} filePath 文件路径
      * @param {any} data 需要写入的数据
      */
-    writeJsonFormat(filePath, data) {
+    static writeJsonFormat(filePath, data) {
         return fs.writeJsonSync(filePath, data, { spaces: 2 });
     }
 };
