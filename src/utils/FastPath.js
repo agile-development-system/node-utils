@@ -40,7 +40,7 @@ class FastPath {
      * @returns {string}
      */
     static convPath(basePath, paths) {
-        return /^(\/)/.test(paths[0]) ? _path.resolve(...paths) : _path.resolve(basePath, ...paths);
+        return _path.isAbsolute(paths[0]) ? _path.resolve(...paths) : _path.resolve(basePath, ...paths);
     }
 };
 module.exports = FastPath;
