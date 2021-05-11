@@ -15,7 +15,7 @@ class FastFs {
     }
 
     /**
-     * 写入数据，不存在的路径自动创建
+     * 同步写入数据，不存在的路径自动创建
      * @param  {string} filename 文件名
      * @param  {object} data 写入的数据（对象）
      * @return {void}
@@ -26,7 +26,7 @@ class FastFs {
     }
 
     /**
-     * 获取路径是否存在
+     * 异步获取路径是否存在
      * @param {string} path 路径
      * @returns {Promise<boolean>}
      */
@@ -48,11 +48,20 @@ class FastFs {
     }
 
     /**
-     * 写入符合.json格式的json文件
+     * 异步写入符合.json格式的json文件
      * @param {string} filePath 文件路径
      * @param {any} data 需要写入的数据
      */
     static writeJsonFormat(filePath, data) {
+        return fs.writeJson(filePath, data, { spaces: 2 });
+    }
+
+    /**
+     * 同步写入符合.json格式的json文件
+     * @param {string} filePath 文件路径
+     * @param {any} data 需要写入的数据
+     */
+    static writeJsonFormatSync(filePath, data) {
         return fs.writeJsonSync(filePath, data, { spaces: 2 });
     }
 };

@@ -2,7 +2,7 @@
  * @Author: 锦阳
  * @Create: 2021年04月22日
  */
-const merge = require('lodash.merge');
+const { merge } = require('webpack-merge');
 /**
  * 支持preset的配置对象
  * @typedef {object} module:nodeUtils.PresetUtils~Config
@@ -37,7 +37,9 @@ class PresetUtils {
      */
     static async getDeepPresetMerge(config) {
         const configs = await this.getDeepPreset(config);
-        return merge(configs);
+        const _config = merge(configs);
+        delete _config.preset;
+        return _config;
     }
 }
 module.exports = PresetUtils;
