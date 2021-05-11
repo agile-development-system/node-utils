@@ -14,7 +14,7 @@
         "lint": "eslint --ext .js,.vue src",
         "lint:fix": "eslint --ext .js,.vue src --fix",
         "commit": "git add . && git cz",
-        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add . && git commit -m \"docs(changelog): 更新CHANGELOG\""
     },
     "gitHooks": {
         "pre-commit": "lint-staged",
