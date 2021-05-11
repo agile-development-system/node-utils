@@ -1,3 +1,12 @@
+## [1.0.5](https://gitee.com/agile-development-system/node-utils/compare/v1.0.4...v1.0.5) (2021-05-11)
+
+
+### Bug Fixes
+
+* **presetutils:** 修改presetUtils使用的merge库,改为使用webpack-merge以获得更好的函数merge支持 ([91f36d4](https://gitee.com/agile-development-system/node-utils/commits/91f36d46c26ef8d6bc424bca98f1ee93d71ebfc7))
+
+
+
 ## [1.0.4](https://gitee.com/agile-development-system/node-utils/compare/v1.0.3...v1.0.4) (2021-04-26)
 
 
