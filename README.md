@@ -9,11 +9,11 @@ npm i @ads/node-utils
 ### 引入
 ```js
 const utils = require('@ads/node-utils');
-const { ConvName, FastPath, FastFs, Notice } = utils;
+const { ConvName, FastPath, FastFs, Notice, PresetUtils } = utils;
 ```
 ### 导出
 ```js
-module.exports = { ConvName, FastPath, FastFs, Notice }
+module.exports = { ConvName, FastPath, FastFs, Notice, PresetUtils }
 ```
 <a name="module_nodeUtils"></a>
 
@@ -117,7 +117,7 @@ module.exports = { ConvName, FastPath, FastFs, Notice }
 <a name="module_nodeUtils.FastFs.writeFileSync"></a>
 
 #### FastFs.writeFileSync(filename, data) ⇒ <code>void</code>
-写入数据，不存在的路径自动创建
+同步写入数据，不存在的路径自动创建
 
 **Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
 
@@ -129,7 +129,7 @@ module.exports = { ConvName, FastPath, FastFs, Notice }
 <a name="module_nodeUtils.FastFs.getPathStat"></a>
 
 #### FastFs.getPathStat(path) ⇒ <code>Promise.&lt;boolean&gt;</code>
-获取路径是否存在
+异步获取路径是否存在
 
 **Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
 
@@ -151,7 +151,19 @@ module.exports = { ConvName, FastPath, FastFs, Notice }
 <a name="module_nodeUtils.FastFs.writeJsonFormat"></a>
 
 #### FastFs.writeJsonFormat(filePath, data)
-写入符合.json格式的json文件
+异步写入符合.json格式的json文件
+
+**Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
+
+| Param | Type | Description |
+| --- | --- | --- |
+| filePath | <code>string</code> | 文件路径 |
+| data | <code>any</code> | 需要写入的数据 |
+
+<a name="module_nodeUtils.FastFs.writeJsonFormatSync"></a>
+
+#### FastFs.writeJsonFormatSync(filePath, data)
+同步写入符合.json格式的json文件
 
 **Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
 
