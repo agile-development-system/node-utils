@@ -51,18 +51,20 @@ class FastFs {
      * 异步写入符合.json格式的json文件
      * @param {string} filePath 文件路径
      * @param {any} data 需要写入的数据
+     * @param {string|number} [space=4] 指定缩进用的空白字符串
      */
-    static writeJsonFormat(filePath, data) {
-        return fs.writeJson(filePath, data, { spaces: 2 });
+    static writeJsonFormat(filePath, data, space = 4) {
+        return this.writeFile(filePath, JSON.stringify(data, null, space));
     }
 
     /**
      * 同步写入符合.json格式的json文件
      * @param {string} filePath 文件路径
      * @param {any} data 需要写入的数据
+     * @param {string|number} [space=4] 指定缩进用的空白字符串
      */
-    static writeJsonFormatSync(filePath, data) {
-        return fs.writeJsonSync(filePath, data, { spaces: 2 });
+    static writeJsonFormatSync(filePath, data, space = 4) {
+        return this.writeFileSync(filePath, JSON.stringify(data, null, space));
     }
 };
 
