@@ -1,3 +1,12 @@
+## [1.0.7](https://gitee.com/agile-development-system/node-utils/compare/v1.0.6...v1.0.7) (2021-05-12)
+
+
+### Features
+
+* **fastfs:** 新增JSON5读取json方法,`FastFs.readJson` ([f9da350](https://gitee.com/agile-development-system/node-utils/commits/f9da350c816785b2ef45ced9fce892cb3524e9dd))
+
+
+
 ## [1.0.6](https://gitee.com/agile-development-system/node-utils/compare/v1.0.5...v1.0.6) (2021-05-12)
 
 
