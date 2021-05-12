@@ -1,3 +1,12 @@
+## [1.0.6](https://gitee.com/agile-development-system/node-utils/compare/v1.0.5...v1.0.6) (2021-05-12)
+
+
+### Bug Fixes
+
+* **fastfs:** writeJsonFormat支持不存在路径自动创建 ([1297f9f](https://gitee.com/agile-development-system/node-utils/commits/1297f9fc1a3248e3de22d832f3a748248da26cea))
+
+
+
 ## [1.0.5](https://gitee.com/agile-development-system/node-utils/compare/v1.0.4...v1.0.5) (2021-05-11)
 
 
