@@ -8,6 +8,7 @@ const babel = require('gulp-babel');
 const ts = require('gulp-typescript');
 const tsProject = ts.createProject('tsconfig.json');
 const merge = require('merge2');
+const run = require('gulp-cli');
 function clean(cb) {
     rimraf('lib', cb);
 }
@@ -22,5 +23,5 @@ function build(cb) {
     cb();
 }
 
-const doit = series(clean, build);
-doit();
+exports.default = series(clean, build);
+run();

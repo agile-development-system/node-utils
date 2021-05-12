@@ -111,7 +111,7 @@ module.exports = { ConvName, FastPath, FastFs, Notice, PresetUtils }
 
 | Param | Type | Description |
 | --- | --- | --- |
-| filename | <code>string</code> | 文件名 |
+| filename | <code>fs.PathLike</code> | 文件名 |
 | data | <code>object</code> | 写入的数据（对象） |
 
 <a name="module_nodeUtils.FastFs.writeFileSync"></a>
@@ -123,7 +123,7 @@ module.exports = { ConvName, FastPath, FastFs, Notice, PresetUtils }
 
 | Param | Type | Description |
 | --- | --- | --- |
-| filename | <code>string</code> | 文件名 |
+| filename | <code>fs.PathLike</code> | 文件名 |
 | data | <code>object</code> | 写入的数据（对象） |
 
 <a name="module_nodeUtils.FastFs.getPathStat"></a>
@@ -135,7 +135,7 @@ module.exports = { ConvName, FastPath, FastFs, Notice, PresetUtils }
 
 | Param | Type | Description |
 | --- | --- | --- |
-| path | <code>string</code> | 路径 |
+| path | <code>fs.PathLike</code> | 路径 |
 
 <a name="module_nodeUtils.FastFs.getPathStatSync"></a>
 
@@ -146,31 +146,55 @@ module.exports = { ConvName, FastPath, FastFs, Notice, PresetUtils }
 
 | Param | Type | Description |
 | --- | --- | --- |
-| path | <code>string</code> | 路径 |
+| path | <code>fs.PathLike</code> | 路径 |
 
 <a name="module_nodeUtils.FastFs.writeJsonFormat"></a>
 
-#### FastFs.writeJsonFormat(filePath, data)
+#### FastFs.writeJsonFormat(filename, data, [space])
 异步写入符合.json格式的json文件
 
 **Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
 
-| Param | Type | Description |
-| --- | --- | --- |
-| filePath | <code>string</code> | 文件路径 |
-| data | <code>any</code> | 需要写入的数据 |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| filename | <code>fs.PathLike</code> |  | 文件路径 |
+| data | <code>any</code> |  | 需要写入的数据 |
+| [space] | <code>string</code> \| <code>number</code> | <code>4</code> | 指定缩进用的空白字符串 |
 
 <a name="module_nodeUtils.FastFs.writeJsonFormatSync"></a>
 
-#### FastFs.writeJsonFormatSync(filePath, data)
+#### FastFs.writeJsonFormatSync(filename, data, [space])
 同步写入符合.json格式的json文件
+
+**Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| filename | <code>fs.PathLike</code> |  | 文件路径 |
+| data | <code>any</code> |  | 需要写入的数据 |
+| [space] | <code>string</code> \| <code>number</code> | <code>4</code> | 指定缩进用的空白字符串 |
+
+<a name="module_nodeUtils.FastFs.readJson"></a>
+
+#### FastFs.readJson(filename) ⇒ <code>Promise.&lt;object&gt;</code>
+异步读取json文件
 
 **Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
 
 | Param | Type | Description |
 | --- | --- | --- |
-| filePath | <code>string</code> | 文件路径 |
-| data | <code>any</code> | 需要写入的数据 |
+| filename | <code>fs.PathLike</code> | json文件路径 |
+
+<a name="module_nodeUtils.FastFs.readJsonSync"></a>
+
+#### FastFs.readJsonSync(filename) ⇒ <code>object</code>
+同步读取json文件
+
+**Kind**: static method of [<code>FastFs</code>](#module_nodeUtils.FastFs)
+
+| Param | Type | Description |
+| --- | --- | --- |
+| filename | <code>fs.PathLike</code> | json文件路径 |
 
 <a name="module_nodeUtils.FastPath"></a>
 
