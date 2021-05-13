@@ -3,11 +3,6 @@
  * @Create: 2021年04月22日
  */
 const { merge } = require('webpack-merge');
-/**
- * 支持preset的配置对象
- * @typedef {object} module:nodeUtils.PresetUtils~Config
- * @property {Config[]} presets 预设配置数组
- */
 
 /**
  * 支持presets预设的配置生成工具
@@ -39,7 +34,21 @@ class PresetUtils {
         const configs = await this.getDeepPreset(config);
         const _config = merge(configs);
         delete _config.preset;
+        typeof config.modify === 'function' && config.modify(config);
         return _config;
     }
 }
 module.exports = PresetUtils;
+
+/**
+ * 支持preset的配置对象
+ * @typedef {object} module:nodeUtils.PresetUtils~Config
+ * @property {Config[]} presets 预设配置数组
+ * @property {module:nodeUtils.PresetUtils~ConfigModify} modify 预设配置数组
+ */
+
+/**
+ * @callback module:nodeUtils.PresetUtils~ConfigModify
+ * @param {Config} config 将默认配置和preset合并后生成的config
+ * @returns {Config}
+ */
