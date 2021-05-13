@@ -44,7 +44,7 @@ module.exports = PresetUtils;
  * 支持preset的配置对象
  * @typedef {object} module:nodeUtils.PresetUtils~Config
  * @property {Config[]} presets 预设配置数组
- * @property {module:nodeUtils.PresetUtils~ConfigModify} modify 预设配置数组
+ * @property {module:nodeUtils.PresetUtils~ConfigModify} modify 将默认配置和preset合并后生成的config再次处理的钩子
  */
 
 /**
