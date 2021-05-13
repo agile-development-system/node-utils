@@ -1,3 +1,12 @@
+## [1.0.8](https://gitee.com/agile-development-system/node-utils/compare/v1.0.7...v1.0.8) (2021-05-13)
+
+
+### Bug Fixes
+
+* **presetutils:** getDeepPresetMerge支持merge配置后调用modify处理配置 ([88b2098](https://gitee.com/agile-development-system/node-utils/commits/88b2098f265bd34958fd961c5257a3b77c5e9cd5))
+
+
+
 ## [1.0.7](https://gitee.com/agile-development-system/node-utils/compare/v1.0.6...v1.0.7) (2021-05-12)
 
 
