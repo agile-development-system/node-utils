@@ -13,6 +13,7 @@ module.exports = {
     settings: {
         'json/sort-package-json': false,
         'json/json-with-comments-files': [],
+        'json/ignore-files': [],
     },
     parser: '@babel/eslint-parser',
     parserOptions: {
