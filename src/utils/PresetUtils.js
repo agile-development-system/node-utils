@@ -33,7 +33,7 @@ class PresetUtils {
     static async getDeepPresetMerge(config) {
         const configs = await this.getDeepPreset(config);
         const _config = merge(configs);
-        delete _config.preset;
+        delete _config.presets;
         return _config;
     }
 
