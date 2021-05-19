@@ -16,7 +16,7 @@
   "gitHooks": {
     "pre-commit": "lint-staged",
     "commit-msg": "commitlint -e $GIT_PARAMS",
-    "prepare-commit-msg": "if [[ \" ${array[@]} \" =~ \" -m \" ]]; then exec < /dev/tty && git cz --hook || true fi"
+    "prepare-commit-msg": "git add . && \"$*\" =~ \" -m\" || exec < /dev/tty && git cz --hook || true fi"
   },
   "lint-staged": {
     "src/**/*.{js,json}": [
