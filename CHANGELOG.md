@@ -1,3 +1,12 @@
+## [1.0.9](https://gitee.com/agile-development-system/node-utils/compare/v1.0.8...v1.0.9) (2021-05-19)
+
+
+### Features
+
+* **presetutils:** 分离merge和modify调用 ([22e0760](https://gitee.com/agile-development-system/node-utils/commits/22e0760248f8f53a8af93b6bfccf6e689a1edb0e))
+
+
+
 ## [1.0.8](https://gitee.com/agile-development-system/node-utils/compare/v1.0.7...v1.0.8) (2021-05-13)
 
 
