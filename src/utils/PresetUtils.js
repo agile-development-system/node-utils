@@ -11,8 +11,8 @@ const { merge } = require('webpack-merge');
 class PresetUtils {
     /**
     * 递归获取配置对象presets数组，返回一维数组
-    * @param {module:nodeUtils.PresetUtils~Config} config 配置对象
-    * @returns {Promise<module:nodeUtils.PresetUtils~Config[]>}
+    * @param {Config} config 配置对象
+    * @returns {Promise<Config[]>}
     */
     static async getDeepPreset(config) {
         const realConfig = await config;
@@ -27,14 +27,24 @@ class PresetUtils {
 
     /**
      * 递归获取配置对象presets数组，并使用merge合并
-     * @param {module:nodeUtils.PresetUtils~Config} config 配置对象
-     * @returns {module:nodeUtils.PresetUtils~Config}
+     * @param {Config} config 配置对象
+     * @returns {Config}
      */
     static async getDeepPresetMerge(config) {
         const configs = await this.getDeepPreset(config);
         const _config = merge(configs);
         delete _config.preset;
-        typeof config.modify === 'function' && config.modify(config);
+        return _config;
+    }
+
+    /**
+     * 递归获取配置对象presets数组，并使用merge合并，最后调用`config.modify`函数
+     * @param {Config} config 配置对象
+     * @returns {Config}
+     */
+    static async getDeepPresetMergeAndModify(config) {
+        const _config = await this.getDeepPreset(config);
+        typeof _config.modify === 'function' && _config.modify(_config);
         return _config;
     }
 }
@@ -42,13 +52,13 @@ module.exports = PresetUtils;
 
 /**
  * 支持preset的配置对象
- * @typedef {object} module:nodeUtils.PresetUtils~Config
+ * @typedef {object} Config
  * @property {Config[]} presets 预设配置数组
- * @property {module:nodeUtils.PresetUtils~ConfigModify} modify 将默认配置和preset合并后生成的config再次处理的钩子
+ * @property {ConfigModify} modify 将默认配置和preset合并后生成的config再次处理的钩子
  */
 
 /**
- * @callback module:nodeUtils.PresetUtils~ConfigModify
+ * @callback ConfigModify
  * @param {Config} config 将默认配置和preset合并后生成的config
  * @returns {Config}
  */
