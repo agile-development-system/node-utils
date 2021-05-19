@@ -7,6 +7,13 @@ module.exports = {
     extends: [
         'standard',
     ],
+    plugins: [
+        'json-format',
+    ],
+    settings: {
+        'json/sort-package-json': false,
+        'json/json-with-comments-files': [],
+    },
     parser: '@babel/eslint-parser',
     parserOptions: {
         ecmaVersion: 12,
