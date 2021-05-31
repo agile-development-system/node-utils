@@ -1,6 +1,6 @@
 {
   "name": "@ads/node-utils",
-  "version": "1.0.10",
+  "version": "1.0.10-5",
   "description": "敏捷开发系统内部node工具函数库",
   "main": "lib",
   "types": "lib/types",
@@ -43,6 +43,7 @@
   "license": "MIT",
   "author": "junyang",
   "dependencies": {
+    "commander": "^7.2.0",
     "fs-extra": "^9.1.0",
     "json5": "^2.2.0",
     "webpack-merge": "^5.7.3"

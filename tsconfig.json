@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ESNext",
     "module": "commonjs",
     "allowJs": true,
     "declaration": true,
@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "esModuleInterop": true,
-    "declarationDir": "lib/type",
+    "declarationDir": "lib/types",
     "outDir": "lib"
   },
   "include": [

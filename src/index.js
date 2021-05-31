@@ -8,4 +8,5 @@ module.exports = {
     FastFs: require('./utils/FastFs'),
     Notice: require('./utils/Notice'),
     PresetUtils: require('./utils/PresetUtils'),
+    CmdParser: require('./utils/CmdParser'),
 };

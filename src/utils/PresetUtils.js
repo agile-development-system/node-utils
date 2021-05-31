@@ -43,7 +43,7 @@ class PresetUtils {
      * @returns {Config}
      */
     static async getDeepPresetMergeAndModify(config) {
-        const _config = await this.getDeepPreset(config);
+        const _config = await this.getDeepPresetMerge(config);
         typeof _config.modify === 'function' && _config.modify(_config);
         return _config;
     }

@@ -46,7 +46,7 @@ class Notice {
 
     /**
      * 获取各种颜色的字体
-     * @param {module:nodeUtils.Notice~chalkType} type chalk类型
+     * @param {ChalkType} type chalk类型
      * @param {string} msg 文本
      * @returns {chalk}
      */
@@ -58,7 +58,7 @@ class Notice {
 
     /**
      * 获取各种颜色的粗体字体
-     * @param {module:nodeUtils.Notice~chalkType} type chalk类型
+     * @param {ChalkType} type chalk类型
      * @param {string} msg 文本
      * @returns {chalk}
      */
@@ -70,7 +70,7 @@ class Notice {
 };
 /**
  * chalk别名转换
- * @param {module:nodeUtils.Notice~chalkType} type chalk类型
+ * @param {ChalkType} type chalk类型
  * @returns {string}
  * @ignore
  */
@@ -86,7 +86,7 @@ function chalkAlias(type) {
 
 /**
  * chalk类型以及别名
- * @typedef {'success'|'error'|'warn'|'info'|string} module:nodeUtils.Notice~chalkType
+ * @typedef {'success'|'error'|'warn'|'info'|string} ChalkType
  */
 
 module.exports = Notice;
