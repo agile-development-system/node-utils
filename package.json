@@ -19,8 +19,8 @@
     "prepare-commit-msg": "node needCz.js && exec < /dev/tty && git cz --hook || true"
   },
   "lint-staged": {
-    "src/**/*.{js,json}": [
-      "eslint"
+    "**/*.{js,json}": [
+      "eslint  --fix"
     ]
   },
   "files": [
