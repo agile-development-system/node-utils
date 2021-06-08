@@ -3,14 +3,16 @@ const JSON5 = require('json5');
 
 /**
  * 文件系统操作类，集合了几个使用频率较高的文件操作函数
+ *
  * @alias module:nodeUtils.FastFs
  */
 class FastFs {
     /**
      * 异步写入数据，不存在的路径自动创建
+     *
      * @param  {fs.PathLike} filename 文件名
      * @param  {object} data 写入的数据（对象）
-     * @return {Promise<void>}
+     * @returns {Promise<void>}
      */
     static writeFile(filename, data) {
         return fs.ensureFile(filename).then(() => fs.writeFile(filename, data));
@@ -18,9 +20,10 @@ class FastFs {
 
     /**
      * 同步写入数据，不存在的路径自动创建
+     *
      * @param  {fs.PathLike} filename 文件名
      * @param  {object} data 写入的数据（对象）
-     * @return {void}
+     * @returns {void}
      */
     static writeFileSync(filename, data) {
         fs.ensureFileSync(filename);
@@ -29,15 +32,18 @@ class FastFs {
 
     /**
      * 异步获取路径是否存在
+     *
      * @param {fs.PathLike} path 路径
      * @returns {Promise<boolean>}
      */
     static getPathStat(path) {
-        return fs.stat(path).catch(() => false);
+        return fs.stat(path).then(() => true)
+            .catch(() => false);
     }
 
     /**
      * 同步获取路径是否存在
+     *
      * @param {fs.PathLike} path 路径
      * @returns {boolean}
      */
@@ -51,9 +57,11 @@ class FastFs {
 
     /**
      * 异步写入符合.json格式的json文件
+     *
      * @param {fs.PathLike} filename 文件路径
      * @param {any} data 需要写入的数据
      * @param {string|number} [space=4] 指定缩进用的空白字符串
+     * @returns {Promise}
      */
     static writeJsonFormat(filename, data, space = 4) {
         return this.writeFile(filename, JSON.stringify(data, null, space));
@@ -61,9 +69,11 @@ class FastFs {
 
     /**
      * 同步写入符合.json格式的json文件
+     *
      * @param {fs.PathLike} filename 文件路径
      * @param {any} data 需要写入的数据
      * @param {string|number} [space=4] 指定缩进用的空白字符串
+     * @returns {void}
      */
     static writeJsonFormatSync(filename, data, space = 4) {
         return this.writeFileSync(filename, JSON.stringify(data, null, space));
@@ -71,6 +81,7 @@ class FastFs {
 
     /**
      * 异步读取json文件
+     *
      * @param {fs.PathLike} filename json文件路径
      * @returns {Promise<object>}
      */
@@ -81,6 +92,7 @@ class FastFs {
 
     /**
      * 同步读取json文件
+     *
      * @param {fs.PathLike} filename json文件路径
      * @returns {object}
      */
@@ -90,10 +102,19 @@ class FastFs {
     }
 };
 
+/**
+ * 使用json5解析json
+ *
+ * @param {string} json json文本
+ * @param {string} filename 文件名称
+ * @returns {any}
+ * @ignore
+ */
 function parseJson(json, filename) {
     try {
         return JSON5.parse(json);
     } catch (err) {
+        /* istanbul ignore next */
         if (filename) { err.message = filename + ': ' + err.message; }
         throw err;
     }

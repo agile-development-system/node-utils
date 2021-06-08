@@ -5,8 +5,10 @@
 const { Command } = require('commander');
 const path = require('path');
 const Notice = require('./Notice');
+
 /**
  * 基于`commander.js`封装的命令行解析工具库
+ *
  * @alias module:nodeUtils.CmdParser
  */
 class CmdParser {

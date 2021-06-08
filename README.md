@@ -13,7 +13,7 @@ const { ConvName, FastPath, FastFs, Notice, PresetUtils } = utils;
 ```
 ### 导出
 ```js
-module.exports = { ConvName, FastPath, FastFs, Notice, PresetUtils }
+module.exports = { ConvName, FastPath, FastFs, Notice, PresetUtils };
 ```
 <a name="module_nodeUtils"></a>
 

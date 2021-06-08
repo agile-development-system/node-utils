@@ -1,17 +1,5 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "commonjs",
-    "allowJs": true,
-    "declaration": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "esModuleInterop": true,
-    "declarationDir": "lib/types",
-    "outDir": "lib"
-  },
+  "extends": "@ads/ts-config-js",
   "include": [
     "src"
   ]

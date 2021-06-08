@@ -4,22 +4,31 @@
   "description": "敏捷开发系统内部node工具函数库",
   "main": "lib",
   "types": "lib/types",
+  "bin": {
+    "ads-gc-has-msg": "lib/bin/gcHasMsg.js"
+  },
   "scripts": {
     "build": "node gulpfile.js",
-    "prepublishOnly": "npm run build",
-    "lint": "eslint --ext .js,.vue,.json src",
-    "lint:fix": "eslint --ext .js,.vue,.json src --fix",
-    "commit": "git add . && git cz",
+    "lint": "eslint --ext .js,.vue,.json,.md lib",
+    "lint:fix": "eslint --ext .js,.vue,.json,.md lib --fix",
+    "docs": "ads-doc",
+    "test": "jest",
+    "commit": "git add . && git commit --no-edit",
     "postversion": "npm run changelog",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add . && git commit -m \"docs(changelog): 更新CHANGELOG\""
+    "prepublishOnly": "npm run docs && (git add . && git commit -m \"docs(readme): 更新文档\" || true)",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "postchangelog": "git add . && git commit -m \"docs(changelog): 更新CHANGELOG\" || true"
+  },
+  "ads": {
+    "config": "lib/ads.cli.config.js"
   },
   "gitHooks": {
     "pre-commit": "lint-staged",
     "commit-msg": "commitlint -e $GIT_PARAMS",
-    "prepare-commit-msg": "node needCz.js && exec < /dev/tty && git cz --hook || true"
+    "prepare-commit-msg": "node lib/bin/gcHasMsg.js && exec < /dev/tty && git cz --hook || true"
   },
   "lint-staged": {
-    "**/*.{js,json}": [
+    "**/*.{js,json,md}": [
       "eslint  --fix"
     ]
   },
@@ -46,9 +55,13 @@
     "commander": "^7.2.0",
     "fs-extra": "^9.1.0",
     "json5": "^2.2.0",
+    "user-home": "^3.0.0",
     "webpack-merge": "^5.7.3"
   },
   "devDependencies": {
+    "@ads/eslint-config-js": "^1.0.4",
+    "@ads/jest-config-node": "^1.0.3",
+    "@ads/ts-config-js": "^1.0.2",
     "@babel/core": "^7.13.15",
     "@babel/eslint-parser": "^7.13.14",
     "@babel/plugin-proposal-class-properties": "^7.13.0",

@@ -1,25 +1,30 @@
 /**
  * 名称处理工具类，命名格式转换
+ *
  * @alias module:nodeUtils.ConvName
  */
 class ConvName {
     /**
      * 横杠名称
+     *
      * @type {string}
      */
     lineName;
     /**
      * 大驼峰名称
+     *
      * @type {string}
      */
     humpName;
     /**
      * 小驼峰名称
+     *
      * @type {string}
      */
     lowerHumpName;
     /**
      * 获取三种名称转换结果的集合
+     *
      * @param {stirng} name 名称文本
      */
     constructor(name) {
@@ -30,7 +35,8 @@ class ConvName {
 
     /**
      * 横杠转大驼峰
-     * @param {string} name
+     *
+     * @param {string} name 名称文本
      * @returns {string}
      */
     static toUpperHump(name) {
@@ -39,7 +45,8 @@ class ConvName {
 
     /**
      * 横杠转小驼峰
-     * @param {string} name
+     *
+     * @param {string} name 名称文本
      * @returns {string}
      */
     static toLowerHump(name) {
@@ -48,7 +55,8 @@ class ConvName {
 
     /**
      * 驼峰转换横杠
-     * @param {string} name
+     *
+     * @param {string} name 名称文本
      * @returns {string}
      */
     static toLine(name) {
@@ -58,7 +66,8 @@ class ConvName {
 
     /**
      * 获取驼峰和横杠名称
-     * @param {string} name
+     *
+     * @param {string} name 名称文本
      * @returns {ConvName}
      */
     static initName(name) {
@@ -68,7 +77,8 @@ class ConvName {
 
 /**
  * 横杠转驼峰(不处理首字母，不推荐使用)
- * @param {string} name
+ *
+ * @param {string} name 名称文本
  * @returns {string}
  * @ignore
  */

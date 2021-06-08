@@ -9,4 +9,5 @@ module.exports = {
     Notice: require('./utils/Notice'),
     PresetUtils: require('./utils/PresetUtils'),
     CmdParser: require('./utils/CmdParser'),
+    GitUtils: require('./utils/GitUtils'),
 };
