@@ -6,14 +6,16 @@ const { merge } = require('webpack-merge');
 
 /**
  * 支持presets预设的配置生成工具
+ *
  * @alias module:nodeUtils.PresetUtils
  */
 class PresetUtils {
     /**
-    * 递归获取配置对象presets数组，返回一维数组
-    * @param {Config} config 配置对象
-    * @returns {Promise<Config[]>}
-    */
+     * 递归获取配置对象presets数组，返回一维数组
+     *
+     * @param {Config} config 配置对象
+     * @returns {Promise<Config[]>}
+     */
     static async getDeepPreset(config) {
         const realConfig = await config;
         const presets = (realConfig.presets || []).reverse();
@@ -27,6 +29,7 @@ class PresetUtils {
 
     /**
      * 递归获取配置对象presets数组，并使用merge合并
+     *
      * @param {Config} config 配置对象
      * @returns {Config}
      */
@@ -39,6 +42,7 @@ class PresetUtils {
 
     /**
      * 递归获取配置对象presets数组，并使用merge合并，最后调用`config.modify`函数
+     *
      * @param {Config} config 配置对象
      * @returns {Config}
      */
@@ -52,6 +56,7 @@ module.exports = PresetUtils;
 
 /**
  * 支持preset的配置对象
+ *
  * @typedef {object} Config
  * @property {Config[]} presets 预设配置数组
  * @property {ConfigModify} modify 将默认配置和preset合并后生成的config再次处理的钩子

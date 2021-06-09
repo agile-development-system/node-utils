@@ -2,7 +2,7 @@
  * @Author: 锦阳
  * @Create: 2021年05月20日
  */
-
+/* istanbul ignore next */
 /**
  * Git工具集合
  *

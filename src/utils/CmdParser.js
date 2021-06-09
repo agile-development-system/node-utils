@@ -5,7 +5,7 @@
 const { Command } = require('commander');
 const path = require('path');
 const Notice = require('./Notice');
-
+/* istanbul ignore next */
 /**
  * 基于`commander.js`封装的命令行解析工具库
  *
