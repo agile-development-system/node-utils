@@ -1,5 +1,5 @@
 # @ads/node-utils
-**版本** ：1.0.11
+**版本** ：1.0.12
 敏捷开发系统内部node工具函数库
 
 ## 快速开始
@@ -696,7 +696,7 @@ Options:
 配合git hooks【prepare-commit-msg】和【commitizen】使用，避免git commit已经传入-m参数时调用commitizen界面
 
 文档查看：git@gitee.com:agile-development-system/node-utils
-@ads/node-utils@1.0.11 /Users/jinyang/code/ads/node-utils
+@ads/node-utils@1.0.12 /Users/jinyang/code/ads/node-utils
 
 ```
 
