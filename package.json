@@ -1,6 +1,6 @@
 {
   "name": "@ads/node-utils",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "敏捷开发系统内部node工具函数库",
   "main": "lib",
   "types": "lib/types",
