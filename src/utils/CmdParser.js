@@ -4,7 +4,7 @@
  */
 const { Command } = require('commander');
 const path = require('path');
-const Notice = require('./Notice');
+const Notice = require('./_notice');
 
 /**
  * 基于`commander.js`封装的命令行解析工具库
