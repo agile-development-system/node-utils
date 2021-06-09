@@ -43,9 +43,9 @@ class CmdParser {
         if (!Array.isArray(config)) {
             config = [config];
         }
-        if (pkg) {
-            program.description(pkg.description);
-        }
+        // if (pkg) {
+        //     program.description(pkg.description);
+        // }
         // 暂时没有开发@ads/cli的计划
         // if (isCore) {
         //     config.forEach(conf => {
@@ -60,7 +60,7 @@ class CmdParser {
         //     });
         // } else {
         const conf = config.find(_conf => _conf.cmd === cmd);
-        program.description(config.desc);
+        program.description(conf.desc || pkg?.description);
         this.optionParseByConfig(program, conf);
         program.action(async function name() {
             try {

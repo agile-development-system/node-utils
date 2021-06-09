@@ -18,7 +18,7 @@ module.exports = (
             template: './template.ejs',
             output: 'README.md',
             files: ['./src/**/*.js'],
-            codesDir: './test/*',
+            codesDir: './test/__test__',
             codesFiles: ['*.js'],
             helpers: {
                 devInstall: true,

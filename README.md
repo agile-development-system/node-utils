@@ -26,9 +26,6 @@ module.exports = { ConvName, FastPath, FastFs, Notice, PresetUtils, GitUtils };
 
 ## 代码演示
 ```js
-export const a = 'a';
-```
-```js
 const { expect, test, describe } = require('@jest/globals');
 const { ConvName, FastFs, FastPath, Notice, PresetUtils } = require('@ads/node-utils');
 const path = require('path');
@@ -687,7 +684,7 @@ chalk类型以及别名
 ```
 Usage: ads-gc-has-msg [options]
 
-敏捷开发系统内部node工具函数库
+判断git commit命令是否传入-m参数
 
 Options:
   -v,--version  查看版本号
