@@ -1,3 +1,12 @@
+## [1.0.12](https://gitee.com/agile-development-system/node-utils/compare/v1.0.11...v1.0.12) (2021-06-09)
+
+
+### Features
+
+* **gitutils:** 新增判断git commit -m的工具 ([eb97465](https://gitee.com/agile-development-system/node-utils/commits/eb97465de3818b9ff13ba3cd368c96f471e81bf9))
+
+
+
 ## [1.0.11](https://gitee.com/agile-development-system/node-utils/compare/1.0.10...v1.0.11) (2021-05-31)
 
 
