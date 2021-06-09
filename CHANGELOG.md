@@ -1,3 +1,12 @@
+## [1.0.13](https://gitee.com/agile-development-system/node-utils/compare/v1.0.12...v1.0.13) (2021-06-09)
+
+
+### Bug Fixes
+
+* **cmdparser:** cmdparser读取desc问题修复 ([61d53b4](https://gitee.com/agile-development-system/node-utils/commits/61d53b470a41a2d95889dc9ac675a7f867e23aff))
+
+
+
 ## [1.0.12](https://gitee.com/agile-development-system/node-utils/compare/v1.0.11...v1.0.12) (2021-06-09)
 
 
