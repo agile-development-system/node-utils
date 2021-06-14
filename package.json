@@ -8,7 +8,7 @@
     "ads-gc-has-msg": "lib/bin/gcHasMsg.js"
   },
   "scripts": {
-    "build": "node gulpfile.js",
+    "build": "gulp",
     "prebuild": "npm run test",
     "lint": "eslint --ext .js,.vue,.json,.md src",
     "lint:fix": "eslint --ext .js,.vue,.json,.md src --fix",
@@ -60,8 +60,10 @@
     "webpack-merge": "^5.7.3"
   },
   "devDependencies": {
+    "@ads/babel-preset-base": "^1.0.0",
     "@ads/cli-plugin-doc": "^1.0.8",
     "@ads/eslint-config-js": "^1.0.5",
+    "@ads/gulp-config-preset": "^1.0.0",
     "@ads/jest-config-node": "^1.0.3",
     "@ads/ts-config-js": "^1.0.2",
     "@babel/core": "^7.13.15",
@@ -78,21 +80,7 @@
     "conventional-changelog": "^3.1.24",
     "conventional-changelog-cli": "^2.1.1",
     "cz-conventional-changelog-zh": "^0.0.2",
-    "eslint": "^7.24.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-json-format": "^2.0.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean": "^0.4.0",
-    "gulp-cli": "^2.3.0",
-    "gulp-typescript": "^6.0.0-alpha.1",
     "lint-staged": "^10.5.4",
-    "merge2": "^1.4.1",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.2.4",
     "yorkie": "^2.0.0"
   }
 }
