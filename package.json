@@ -10,8 +10,8 @@
   "scripts": {
     "build": "node gulpfile.js",
     "prebuild": "npm run test",
-    "lint": "eslint --ext .js,.vue,.json,.md lib",
-    "lint:fix": "eslint --ext .js,.vue,.json,.md lib --fix",
+    "lint": "eslint --ext .js,.vue,.json,.md src",
+    "lint:fix": "eslint --ext .js,.vue,.json,.md src --fix",
     "docs": "ads-doc",
     "test": "jest",
     "commit": "git add . && git commit --no-edit",
