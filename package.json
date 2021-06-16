@@ -1,6 +1,6 @@
 {
   "name": "@agds/node-utils",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "agds系统内部node工具函数库",
   "main": "lib",
   "types": "lib/types",
