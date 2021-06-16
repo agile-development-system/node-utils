@@ -1,3 +1,7 @@
+## [1.0.14](https://gitee.com/agile-development-system/node-utils/compare/v1.0.13...v1.0.14) (2021-06-16)
+
+
+
 ## [1.0.13](https://gitee.com/agile-development-system/node-utils/compare/v1.0.12...v1.0.13) (2021-06-09)
 
 
