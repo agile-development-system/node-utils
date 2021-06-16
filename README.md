@@ -1,17 +1,19 @@
-# @ads/node-utils
-**版本** ：1.0.13
-敏捷开发系统内部node工具函数库
+# @agds/node-utils
+
+**版本** ：1.0.1
+
+agds系统内部node工具函数库
 
 ## 快速开始
 
 ### 安装
 ```bash
-npm i -D @ads/node-utils
+npm i -D @agds/node-utils
 ```
 
 ### 引入
 ```js
-const utils = require('@ads/node-utils');
+const utils = require('@agds/node-utils');
 const { ConvName, FastPath, FastFs, Notice, PresetUtils, GitUtils } = utils;
 ```
 
@@ -27,7 +29,7 @@ module.exports = { ConvName, FastPath, FastFs, Notice, PresetUtils, GitUtils };
 ## 代码演示
 ```js
 const { expect, test, describe } = require('@jest/globals');
-const { ConvName, FastFs, FastPath, Notice, PresetUtils } = require('@ads/node-utils');
+const { ConvName, FastFs, FastPath, Notice, PresetUtils } = require('@agds/node-utils');
 const path = require('path');
 const fs = require('fs-extra');
 describe('ConvName', () => {
@@ -135,8 +137,8 @@ describe('FastPath', () => {
         const res = FastPath.getHomePath('cache');
         expect(typeof res === 'string').toBe(true);
     });
-    test('FastPath.getAdsHomePath', () => {
-        const res = FastPath.getAdsHomePath('cache');
+    test('FastPath.getagdsHomePath', () => {
+        const res = FastPath.getAgdsHomePath('cache');
         expect(typeof res === 'string').toBe(true);
     });
     test('FastPath.convPath', () => {
@@ -259,7 +261,7 @@ describe('PresetUtils', () => {
 | --- | --- | --- |
 | options | <code>object</code> | 函数参数 |
 | options.root | <code>string</code> | 当前命令行npm包根目录 |
-| [options.isCore] | <code>boolean</code> | 是否是@ads/cli调用 |
+| [options.isCore] | <code>boolean</code> | 是否是@agds/cli调用 |
 | [options.cmd] | <code>string</code> | 命令名称，命令调用必填 |
 
 <a name="module_nodeUtils.ConvName"></a>
@@ -469,9 +471,9 @@ describe('PresetUtils', () => {
 | --- | --- | --- |
 | ...paths | <code>string</code> | 路径 |
 
-<a name="module_nodeUtils.FastPath.getAdsHomePath"></a>
+<a name="module_nodeUtils.FastPath.getAgdsHomePath"></a>
 
-##### FastPath.getAdsHomePath(...paths) ⇒ <code>string</code>
+##### FastPath.getAgdsHomePath(...paths) ⇒ <code>string</code>
 获取用户目录加路径的绝对路径
 
 **性质**: [<code>FastPath</code>](#module_nodeUtils.FastPath)的静态方法
@@ -628,7 +630,7 @@ Git工具集合
 
 | 属性 | 类型 | 描述 |
 | --- | --- | --- |
-| cmd | <code>string</code> | 作为插件时为子命令名称，单独使用时`ads-<cmd>`为命令行程序名称 |
+| cmd | <code>string</code> | 作为插件时为子命令名称，单独使用时`agds-<cmd>`为命令行程序名称 |
 | desc | <code>string</code> | 描述 |
 | alias | <code>string</code> | 此命令的别名，只在插件调用时有效 |
 | opts | [<code>Array.&lt;OptConfig&gt;</code>](#OptConfig) | option配置项描述 |
@@ -682,7 +684,7 @@ chalk类型以及别名
 ### 命令行使用文档
 
 ```
-Usage: ads-gc-has-msg [options]
+Usage: agds-gc-has-msg [options]
 
 判断git commit命令是否传入-m参数
 
@@ -693,7 +695,7 @@ Options:
 配合git hooks【prepare-commit-msg】和【commitizen】使用，避免git commit已经传入-m参数时调用commitizen界面
 
 文档查看：git@gitee.com:agile-development-system/node-utils
-@ads/node-utils@1.0.13 /Users/jinyang/code/ads/node-utils
+@agds/node-utils@1.0.1 /Users/jinyang/code/ads/node-utils/node_modules/@agds/node-utils
 
 ```
 

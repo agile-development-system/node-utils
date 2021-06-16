@@ -1,5 +1,5 @@
 const { expect, test, describe } = require('@jest/globals');
-const { ConvName, FastFs, FastPath, Notice, PresetUtils } = require('@ads/node-utils');
+const { ConvName, FastFs, FastPath, Notice, PresetUtils } = require('@agds/node-utils');
 const path = require('path');
 const fs = require('fs-extra');
 describe('ConvName', () => {
@@ -107,8 +107,8 @@ describe('FastPath', () => {
         const res = FastPath.getHomePath('cache');
         expect(typeof res === 'string').toBe(true);
     });
-    test('FastPath.getAdsHomePath', () => {
-        const res = FastPath.getAdsHomePath('cache');
+    test('FastPath.getagdsHomePath', () => {
+        const res = FastPath.getAgdsHomePath('cache');
         expect(typeof res === 'string').toBe(true);
     });
     test('FastPath.convPath', () => {

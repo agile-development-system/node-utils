@@ -32,8 +32,8 @@ class FastPath {
      * @param {...string} paths 路径
      * @returns {string}
      */
-    static getAdsHomePath(...paths) {
-        return this.convPath(this.getHomePath('.ads'), paths);
+    static getAgdsHomePath(...paths) {
+        return this.convPath(this.getHomePath('.agds'), paths);
     }
 
     /**

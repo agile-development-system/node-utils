@@ -4,5 +4,5 @@
  */
 const { PresetUtils } = require('./lib/index');
 module.exports = PresetUtils.getDeepPresetMergeAndModify({
-    presets: [require('@ads/jest-config-node')()],
+    presets: [require('@agds/jest-config-node')()],
 });

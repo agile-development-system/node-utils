@@ -30,7 +30,7 @@ class CmdParser {
      *
      * @param {object} options 函数参数
      * @param {string} options.root 当前命令行npm包根目录
-     * @param {boolean} [options.isCore] 是否是@ads/cli调用
+     * @param {boolean} [options.isCore] 是否是@agds/cli调用
      * @param {string} [options.cmd] 命令名称，命令调用必填
      */
     static cmdParser({ root, isCore, cmd }) {
@@ -39,18 +39,18 @@ class CmdParser {
         /**
          * @type {CmdConfig[]}
          */
-        let config = require(path.resolve(root, pkg?.ads?.config || 'ads.cli.config.js'));
+        let config = require(path.resolve(root, pkg?.agds?.config || 'agds.cli.config.js'));
         if (!Array.isArray(config)) {
             config = [config];
         }
         // if (pkg) {
         //     program.description(pkg.description);
         // }
-        // 暂时没有开发@ads/cli的计划
+        // 暂时没有开发@agds/cli的计划
         // if (isCore) {
         //     config.forEach(conf => {
         //         if (!conf.cmd) {
-        //             throw new Error('插件配置错误，作为ads命令行插件使用时命令行配置项必须配置`cmd`');
+        //             throw new Error('插件配置错误，作为agds命令行插件使用时命令行配置项必须配置`cmd`');
         //         }
         //         const cmd = conf.cmd ? program.command(conf.cmd) : program;
         //         cmd.alias(conf.alias);
@@ -91,7 +91,7 @@ module.exports = CmdParser;
 
 /**
  * @typedef {object} CmdConfig 命令行解析配置
- * @property {string} cmd 作为插件时为子命令名称，单独使用时`ads-<cmd>`为命令行程序名称
+ * @property {string} cmd 作为插件时为子命令名称，单独使用时`agds-<cmd>`为命令行程序名称
  * @property {string} desc 描述
  * @property {string} alias 此命令的别名，只在插件调用时有效
  * @property {OptConfig[]} opts option配置项描述
