@@ -15,16 +15,20 @@ module.exports = (
             GenDoc.getCliUsages(),
         ]));
         return {
-            template: './template.ejs',
             output: 'README.md',
             files: ['./src/**/*.js'],
             codesDir: './test/__test__',
             codesFiles: ['*.js'],
             helpers: {
-                devInstall: true,
                 importCode: GenDoc.getFileContent('./docs/import.js'),
                 exportCode: GenDoc.getFileContent('./docs/export.js'),
-                cliUsages,
+                postfixes: [
+                    {
+                        id: 'cliUsages',
+                        title: '命令行使用文档',
+                        content: '```\n' + cliUsages + '```\n',
+                    },
+                ],
             },
         };
     })();

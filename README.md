@@ -7,11 +7,13 @@ agds系统内部node工具函数库
 ## 快速开始
 
 ### 安装
+
 ```bash
 npm i -D @agds/node-utils
 ```
 
 ### 引入
+
 ```js
 const utils = require('@agds/node-utils');
 const { ConvName, FastPath, FastFs, Notice, PresetUtils, GitUtils } = utils;
@@ -27,6 +29,7 @@ module.exports = { ConvName, FastPath, FastFs, Notice, PresetUtils, GitUtils };
 
 
 ## 代码演示
+
 ```js
 const { expect, test, describe } = require('@jest/globals');
 const { ConvName, FastFs, FastPath, Notice, PresetUtils } = require('@agds/node-utils');
@@ -679,9 +682,14 @@ chalk类型以及别名
 | config | [<code>Config</code>](#Config) | 将默认配置和preset合并后生成的config |
 
 
+ <!-- 渲染后缀内容  -->
 
 
-### 命令行使用文档
+
+<a name="cliUsages"></a>
+
+
+## 命令行使用文档
 
 ```
 Usage: agds-gc-has-msg [options]
@@ -696,7 +704,7 @@ Options:
 
 文档查看：git@gitee.com:agile-development-system/node-utils
 @agds/node-utils@1.0.1 /Users/jinyang/code/ads/node-utils/node_modules/@agds/node-utils
-
 ```
+
 
 
