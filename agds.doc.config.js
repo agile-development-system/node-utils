@@ -4,6 +4,7 @@
  */
 
 const GenDoc = require('@agds/cli-plugin-doc');
+const preset = require('@agds/agds-doc-preset');
 module.exports = (
     /**
      * 配置参数
@@ -15,11 +16,12 @@ module.exports = (
             GenDoc.getCliUsages(),
         ]));
         return {
-            output: 'README.md',
+            presets: [preset],
             files: ['./src/**/*.js'],
             codesDir: './test/__test__',
             codesFiles: ['*.js'],
             helpers: {
+                devInstall: false,
                 importCode: GenDoc.getFileContent('./docs/import.js'),
                 exportCode: GenDoc.getFileContent('./docs/export.js'),
                 postfixes: [

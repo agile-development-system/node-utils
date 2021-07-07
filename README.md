@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/lib/docs/logos/light/1.png" alt="logo">
+</p>
+
 # @agds/node-utils
 
 **版本** ：1.0.14
@@ -9,7 +13,7 @@ agds系统内部node工具函数库
 ### 安装
 
 ```bash
-npm i -D @agds/node-utils
+npm i @agds/node-utils
 ```
 
 ### 引入
@@ -21,6 +25,7 @@ const { ConvName, FastPath, FastFs, Notice, PresetUtils, GitUtils } = utils;
 
 
 ### 导出
+
 ```js
 module.exports = { ConvName, FastPath, FastFs, Notice, PresetUtils, GitUtils };
 ```
@@ -508,6 +513,7 @@ Git工具集合
 
 ##### gcHasMsg.gcHasMsg() ⇒ <code>boolean</code>
 判断`git commit`是否传入`-m`参数
+配合`yorkie`使用，不支持识别husky
 
 **性质**: [<code>gcHasMsg</code>](#module_nodeUtils.gcHasMsg)的静态方法
 <a name="module_nodeUtils.Notice"></a>
@@ -682,12 +688,11 @@ chalk类型以及别名
 | config | [<code>Config</code>](#Config) | 将默认配置和preset合并后生成的config |
 
 
- <!-- 渲染后缀内容  -->
+
 
 
 
 <a name="cliUsages"></a>
-
 
 ## 命令行使用文档
 
@@ -706,5 +711,32 @@ Options:
 @agds/node-utils@1.0.1 /Users/jinyang/code/ads/node-utils/node_modules/@agds/node-utils
 ```
 
+
+
+
+<a name="license"></a>
+
+## 许可证
+
+[MIT License](https://gitee.com/agile-development-system/node-utils/blob/master/LICENSE)
+Copyright (c) 2021 锦阳
+
+
+
+<a name="donate"></a>
+
+## 请维护者喝杯咖啡
+
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/lib/docs/qrcode/alipay.jpeg" width="209px" >
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/lib/docs/qrcode/wechatpay.jpeg" width="237px" >
+
+
+
+
+<a name="dingtalk"></a>
+
+## 加入钉钉群讨论或加入开发
+
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/lib/docs/qrcode/dingtalk.jpeg" width="188px" >
 
 

@@ -11,6 +11,7 @@
 class GitUtils {
     /**
      * 判断`git commit`是否传入`-m`参数
+     * 配合`yorkie`使用，不支持识别husky
      *
      * @returns {boolean}
      */
